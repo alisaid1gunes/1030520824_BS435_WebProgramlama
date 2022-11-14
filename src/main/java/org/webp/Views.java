@@ -12,4 +12,8 @@ public class Views {
 
     @Column(name = "viewDate", nullable = false)
     private Date viewDate;
+
+    @JoinColumn(name = "statistics", nullable = false)
+    @ManyToOne
+    private Statistics statistics;
 }

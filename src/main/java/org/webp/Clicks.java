@@ -12,4 +12,8 @@ public class Clicks {
 
     @Column(name = "clickDate", nullable = false)
     private Date clickDate;
+
+    @JoinColumn(name = "statistics", nullable = false)
+    @ManyToOne
+    private Statistics statistics;
 }

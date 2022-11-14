@@ -24,8 +24,9 @@ public class Links {
     @Column(name = "image", nullable = false)
     private String image;
 
-    @Column(name = "statistic", nullable = false)
-    private int statistic;
+    @JoinColumn(name = "statistic", nullable = false)
+    @OneToOne
+    private Statistics statistic;
 
     @JoinColumn(name = "user", nullable = false)
     @ManyToOne
