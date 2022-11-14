@@ -10,11 +10,11 @@ public class Statistics {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "clicks", nullable = false)
+    @Column(name = "clicks")
     @OneToMany
     private List<Clicks> clicks;
 
-    @Column(name = "views", nullable = false)
+    @Column(name = "views")
     @OneToMany
     private List<Views> views;
 
