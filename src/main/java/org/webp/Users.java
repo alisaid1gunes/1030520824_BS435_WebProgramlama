@@ -1,10 +1,13 @@
 package org.webp;
 
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.sql.Timestamp;
 import java.util.List;
 
 
@@ -41,5 +44,13 @@ public class Users {
     @JoinColumn(name = "refreshToken", nullable = false)
     @OneToOne
     private RefreshTokens refreshToken;
+
+    @Column(name = "created_at", nullable = false)
+    @CreationTimestamp
+    private Timestamp createdAt;
+
+    @Column(name = "updated_at", nullable = false)
+    @UpdateTimestamp
+    private Timestamp updatedAt;
 
 }
