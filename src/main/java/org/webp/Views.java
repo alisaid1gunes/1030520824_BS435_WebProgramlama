@@ -10,7 +10,7 @@ public class Views {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "viewDate")
+    @Column(name = "viewDate", nullable = false)
     private Date viewDate;
 
     @JoinColumn(name = "statistics", nullable = false)
