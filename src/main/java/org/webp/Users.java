@@ -18,7 +18,7 @@ public class Users {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name")
     @Length(min = 2, max = 50)
     private String name;
 
@@ -37,11 +37,11 @@ public class Users {
     @Length(min = 2, max = 255)
     private String username;
 
-    @JoinColumn(name = "profile", nullable = false)
+    @JoinColumn(name = "profile")
     @OneToOne()
     private Profiles profile;
 
-    @JoinColumn(name = "refreshToken", nullable = false)
+    @JoinColumn(name = "refreshToken")
     @OneToOne
     private RefreshTokens refreshToken;
 
@@ -49,7 +49,7 @@ public class Users {
     @CreationTimestamp
     private Timestamp createdAt;
 
-    @Column(name = "updated_at", nullable = false)
+    @Column(name = "updated_at")
     @UpdateTimestamp
     private Timestamp updatedAt;
 
