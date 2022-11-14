@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.util.List;
 
 
 @Entity
@@ -18,8 +19,8 @@ public class Users {
     @Length(min = 2, max = 50)
     private String name;
 
-    @Column(name = "link", nullable = false)
-    private int link;
+    @OneToMany
+    private List<Links> link;
 
     @Column(name = "email", nullable = false)
     @Email
