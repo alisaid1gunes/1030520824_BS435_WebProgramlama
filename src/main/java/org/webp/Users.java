@@ -36,4 +36,8 @@ public class Users {
     @Column(name = "profile", nullable = false)
     private int profile;
 
+    @JoinColumn(name = "refreshToken", nullable = false)
+    @OneToOne
+    private RefreshTokens refreshToken;
+
 }
