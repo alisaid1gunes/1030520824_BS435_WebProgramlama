@@ -33,8 +33,9 @@ public class Users {
     @Length(min = 2, max = 255)
     private String username;
 
-    @Column(name = "profile", nullable = false)
-    private int profile;
+    @JoinColumn(name = "profile", nullable = false)
+    @OneToOne()
+    private Profiles profile;
 
     @JoinColumn(name = "refreshToken", nullable = false)
     @OneToOne
