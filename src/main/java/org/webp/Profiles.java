@@ -9,13 +9,13 @@ public class Profiles {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "photo", nullable = false)
+    @Column(name = "photo")
     private String photo;
 
-    @Column(name = "bio", nullable = false)
+    @Column(name = "bio")
     private String bio;
 
-    @Column(name = "profileTitle", nullable = false)
+    @Column(name = "profileTitle")
     private String profileTitle;
 
     @Column(name = "user", nullable = false)
