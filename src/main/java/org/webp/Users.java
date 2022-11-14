@@ -53,4 +53,15 @@ public class Users {
     @UpdateTimestamp
     private Timestamp updatedAt;
 
-}
+    public Users(Long id,String email, String password, String username, Timestamp createdAt) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.username = username;
+        this.createdAt = createdAt;
+    }
+
+    }
+
+
+

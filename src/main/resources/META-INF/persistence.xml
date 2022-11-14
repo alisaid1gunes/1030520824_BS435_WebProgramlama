@@ -10,18 +10,18 @@
 
 
     <persistence-unit name="Hibernate" transaction-type="RESOURCE_LOCAL">
-        <class>org.webp.String</class>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <properties>
             <property name="connection.driver_class" value="org.h2.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:h2:./target/hibernate"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.username" value="asg"/>
+            <property name="hibernate.connection.password" value="asg123asg"/>
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
             <property name="hibernate.show_sql" value="true"/>
         </properties>
     </persistence-unit>
 
 </persistence>
-
 
