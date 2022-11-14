@@ -21,7 +21,7 @@ public class Links {
     @Column(name = "isActive", nullable = false)
     private char isActive;
 
-    @Column(name = "image", nullable = false)
+    @Column(name = "image")
     private String image;
 
     @JoinColumn(name = "statistic", nullable = false)
