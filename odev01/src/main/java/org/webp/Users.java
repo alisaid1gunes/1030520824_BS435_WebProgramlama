@@ -61,7 +61,10 @@ public class Users {
         this.createdAt = createdAt;
     }
 
+    public Users() {
+
     }
+}
 
 
 
